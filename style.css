@@ -1,0 +1,514 @@
+/* 
+Theme Name: ORIGINAL
+Description: オリジナルテーマ
+Author: 管理人
+ */
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+body {
+  background-color: #000000;
+  margin: 10px;
+  font-family: 'Ubuntu','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-outer {
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 20px 15px;
+  /* background: none; */
+}
+
+header {
+  background-color: #7f7f7f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 7px 20px;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+.content {
+  width: 80%;
+  padding: 20px 0;
+  margin: 50px 0 0;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 20px 0;
+  margin: 50px 0 0;
+  background-color: #e14d4d;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.menu li {
+  margin-bottom: 25px;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: white;
+  color: #e14d4d;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.home .menu li a:hover {
+  color: black;
+}
+
+.photo .menu li a:hover {
+  color: #4d77e1;
+}
+
+/* .content,  要素コメントアウト */
+/* .sidebar {
+  background-color: #ffaa00;
+} */
+
+footer {
+  background-color: #ffffff;
+  padding: 0 0 5px;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.0rem;
+}
+
+/* --------------トップページ-------------- */
+
+.home {
+  animation-name: fadein;
+  animation-duration: 2s;  
+}
+
+.home .main {
+  height: 100vh;
+  background-color: #000000;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  padding: 0 20px 5px 40px;
+}
+
+.home .content {
+  background: none;
+  margin-top: 100px;
+}
+
+.home .sidebar {
+  background: none;
+  margin-top: 100px;
+}
+
+.home .content h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.home .content .since {
+  font-weight: bold;
+}
+
+.home .content .message {
+  width: 320px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.home footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+/* ---------------カテゴリー--------------- */
+
+.content {
+  background: none;  
+}
+
+.cattitle {
+  margin: 0 0 20px;
+}
+
+.cattitle h1 {
+  color: #e14d4d;
+  font-size: 4rem;
+  line-height: 1em;
+  margin-right: 16px;
+  display: inline;
+}
+
+.cattitle p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: normal;
+  display: inline;
+}  
+
+.post {
+  display: flex;
+  justify-content: space-around;
+  /* align-content: space-around; */
+  margin-bottom: 30px;
+}
+
+.postimage {
+  flex-basis: 45%;
+  /* border: solid 1px #aaaaaa; */
+  margin-bottom: 30px;
+}
+
+.postinfo {
+  flex-basis: 30%;
+}
+
+.post h2 {
+  font-size: 2rem;
+  background-image: url(images/redmark.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  border-bottom: solid 1px #aaaaaa;
+  padding: 0 0 6px 26px;
+  margin: 0 0 8px;
+}
+
+.post h2 a {
+  color: #000000;
+}
+
+.post p {
+  font-size: 1rem;
+  margin: 10px 20px;
+}
+
+.prevnext {
+  display: flex;
+  justify-content: space-around;
+}
+
+.prevnext a {
+  color: #e14d4d;
+  font-weight: bold;
+}
+
+.prev a {
+  background-image: url(images/redprev.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  line-height: 26px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+}
+
+.next a {
+  background-image: url(images/rednext.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  line-height: 26px;
+  padding-right: 30px;
+  font-size: 1.3rem;
+}
+
+/* ---------------カテゴリーphoto--------------- */
+
+.photolist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 5px;
+}
+
+
+/* ---------------シングル--------------- */
+
+.postinfo .address {
+  color: #666666;
+}
+
+.postinfo table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.postinfo th {
+  width: 6em;
+}
+
+.postinfo th, .postinfo td {
+  border: solid 1px #aaaaaa;
+  text-align: left;
+  padding: 2px 5px;
+}
+
+.photosingle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photosingle .postimage {
+  flex-basis: 50%;
+  order: 2;
+}
+
+.photosingle .postinfo {
+  flex-basis: 30%;
+  order: 1;
+  margin-bottom: 30px;
+}
+
+.postframe {
+  display: flex;
+  flex-direction: column;
+}
+
+.postframe table {
+  margin-top: 15px;
+}
+
+.photo .content h1 {
+  color: #4d77e1;
+}
+
+.photo .content h2 {
+  background-image: url(images/bluemark.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 26px;
+}
+
+.photo .sidebar {
+  background-color: #4d77e1;
+}
+
+.photo .prev a {
+  background-image: url(images/blueprev.png);
+  color: #4d77e1;
+}
+
+.photo .next a {
+  background-image: url(images/bluenext.png);
+  color: #4d77e1;
+}
+
+/* --------------ハンバーガーメニュー-------------- */
+
+.ham {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgb(7, 7, 7);
+  display: none;
+}
+
+.ham_line {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 3px;
+  background-color: #95c0f1;
+  transition: all 0.3s;
+}
+
+.ham_line1 {
+  top: 10px;
+}
+
+.ham_line2 {
+  top: 18px;
+}
+
+.ham_line3 {
+  top: 26px;
+}
+
+.clicked .ham_line1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+
+.clicked .ham_line2 {
+  display: none;
+}
+
+.clicked .ham_line3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.menu_in {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -350px;
+  background-color: rgb(7, 7, 7);
+  transition: all 0.3s;
+  z-index: 10;
+  text-align: center;
+  margin-left: 2px;
+}
+
+.menu_in ul {
+  padding: 30px;
+  font-size: 1.2rem;
+}
+
+.menu_in ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.clicked .menu_in {
+  left: 8px;
+}
+
+/* ---------------モバイル--------------- */
+
+@media (max-width: 800px) {
+  .main, .post {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 10px;
+  }
+
+  .content, .sidebar {
+    width: 100%;
+  }
+
+  .home .content h1 {
+    font-size: 54px;
+  }
+
+
+  /* .home-footer {
+    display: none;
+  } */
+
+  header {
+    padding: 7px 10px;
+  }
+
+  header, footer > p, .menu {
+    font-size: 0.8rem;    
+  }
+
+  .menu li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .home .main {
+    margin: 0 auto;
+    padding-left: 10px;
+    height: 145vh;
+  }
+
+  .cattitle h1 {
+    font-size: 3rem;
+  }
+
+  .postinfo {
+    margin-top: 20px;
+  }
+
+  .post h2 {
+    font-size: 1.3rem;
+  }
+
+  .prev a {
+    background-image: url(images/redprev2.png);
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+
+  .next a {
+    background-image: url(images/rednext2.png);
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+
+  .photolist {
+    grid-template-columns: 1fr;
+  }
+
+  .photo .prev a {
+    background-image: url(images/blueprev2.png);
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+
+  .photo .next a {
+    background-image: url(images/bluenext2.png);
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+  .home .main {
+    height: 170vh;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
