@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background: #1d3557; */
+  background: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.cattitle p {
+  color: #e14d4d;
+  margin: 5px;
+}
+
+.card-wrapper-1 {
+  position: relative;
+  animation-name: fadein;
+  animation-duration: 5s;  
+}
+
+.card-wrapper-2 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 700px;
+  height: 300px;
+  box-shadow: 0 70px 70px rgba(0, 0, 0, 0.4);
+}
+
+.container1 {
+  width: 100%;
+  height: 80px;
+  background: #f85563;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.container2 {
+  width: 100%;
+  height: 260px;
+  background: #edeaea;
+  position: relative;
+  text-align: center;
+}
+
+.container2 img {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  border-radius: 30%;
+  top: -65px;
+  left: 270px;
+  border: 3px solid #fff;
+}
+
+.container2 h2 {
+  padding-top: 60px;
+  color: #e63946;
+  font-weight: 900;
+}
+
+.container2 span {
+  color: #e63946;
+  font-size: 1.2rem;
+}
+
+.container2 p {
+  padding: 12px 20px 0;
+  font-size: 1rem;
+  color: #14151e;
+  text-align: left;
+}
+
+.container3 {
+  width: 100%;
+  height: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #edeaea;
+  position: relative;
+  /* border-top: 1px solid #e63946; */
+}
+
+/* .container3 .share {
+  width: 48%;
+  height: 50px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+}
+
+.container3 .share .fab {
+  color: #e63946;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.container3 .share:nth-child(1) {
+  border-right: 1px solid #e63946;
+} */
+
+/* -------------switch------------- */
+
+.card {
+  /* position: relative; */
+  /* width: 250px; */
+}
+.card_reverse {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+}
+
+/* 表面の表示 */
+.is-surface .card_surface {
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition:
+      opacity 100ms 150ms,
+      transform 300ms 150ms;
+}
+.is-surface .card_reverse {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition:
+      opacity 50ms 200ms,
+      transform 300ms;
+}
+
+/* 裏面の表示 */
+.is-reverse .card_surface {
+  opacity: 0;
+  transform:rotateY(90deg);
+  transition:
+      opacity 50ms 200ms,
+      transform 300ms;
+}
+.is-reverse .card_reverse {
+  opacity: 1;
+  transform:rotateY(0deg);
+  transition:
+      opacity 100ms 150ms,
+      transform 300ms 150ms;
+}
+
+.switch {
+  font-size: 0.8rem;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  background-color: #f85563;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+.switch:focus {
+  outline: 0;
+}
+
+.card_reverse .reverse {
+  background-color: #c1adf0;
+}
+
+.card_reverse span {
+  display: block;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.container-icon {
+  padding-top: 40px;
+}
+
+.container-icon .icon {
+  display: inline;
+  font-size: 4rem;
+  color: #c1adf0;
+  margin: 0 15px;
+}
+
+/* -----------------フォーム------------------ */
+
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  /* height: 350px; */
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+form div {
+  margin-bottom: 14px;
+}
+
+label, .message {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  display: block;
+  color: #767679;
+  font-weight: 600;
+}
+
+input[type="text"], input[type="email"], textarea {
+  background: rgba(255, 255, 255, .5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 450px;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+/* input[type="submit"],  */
+.wpcf7-submit {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 15px 35px;
+  border-radius: 5px;
+  background-color: #69cff8;
+  color: white;
+}
+
+/* input[type="submit"] */
+.wpcf7-submit:hover {
+  background-color: #00acee;
+}
+
+.twittericon .fa-twitter-square {
+  padding: 5px 35px;
+  background-color: #00acee;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  color: #edeaea;
+  margin: 0 5px;
+}
+
+.twittericon .fa-twitter-square:hover {
+  background-color: #1b95e0;
+}
+
+/* ------------モバイル------------ */
+
+@media (max-width: 800px) {
+
+  .content {
+    margin: 10px 0 30px 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .container {
+    width: 350px;
+    height: 400px;
+  }
+  
+  .container2 {
+    height: 400px;
+  }
+
+  .card-wrapper-2 {
+    top: 35%;
+  }
+
+  .container2 img {
+    left: 100px;
+  }
+
+  .container3 {
+    /* height: 30px; */
+  }
+
+  .switch {
+    top: 60%;
+  }
+
+  .page-about {
+    position: relative;
+  }
+
+  .page-about3 {
+    position: absolute;
+    top: 100%;
+    /* width: 70%; */
+    /* min-height: 100vh; */
+    /* min-width: 100vw; */
+  }
+
+  textarea {
+    max-width: 300px;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
